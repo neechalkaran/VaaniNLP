@@ -1,0 +1,14 @@
+{
+   "app_desc": {
+      "message": "Allow using Vaani service on editable controls."
+   },
+   "app_name": {
+      "message": "Vaani Spellchecker"
+   },
+  "vaani_menu": {
+      "message": "vaani Tools"
+   },
+  "vaani_spellcheck": {
+  "message":"spellcheck"
+  }
+}

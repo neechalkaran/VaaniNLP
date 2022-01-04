@@ -1,0 +1,212 @@
+.vbutton {
+           border-top-color: #819BCB;
+            border-right-color: #819BCB;
+            border-bottom-color: #5E050B;
+            border-left-color: #819BCB;
+            /*border-width: 1px 1px 1px 1px;
+            border-style: solid;*/
+            -webkit-border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+            font-size: 11px;
+  
+            font-family: arial, helvetica, sans-serif;                      
+            text-decoration: none;
+            display: inline-block;
+            text-shadow: 0px 1px 0 rgba(255,255,255,0.4);
+            font-weight: bold;
+            color: #5E050B;
+            background-color: #49c0f0;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#49c0f0), to(#2CAFE3));
+            background-image: -webkit-linear-gradient(top, #49c0f0, #2CAFE3);
+            background-image: -moz-linear-gradient(top, #49c0f0, #2CAFE3);
+            background-image: -ms-linear-gradient(top, #49c0f0, #2CAFE3);
+            background-image: -o-linear-gradient(top, #49c0f0, #2CAFE3);
+            background-image: linear-gradient(to bottom, #49c0f0, #2CAFE3);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#49c0f0, endColorstr=#2CAFE3);
+            /*cursor: hand;*/
+            cursor: pointer;
+  
+        }
+input[type=checkbox]
+{z-index: 1; position:relative;
+}
+.vbutton-normal{padding: 5px 5px 5px 5px;}
+.vbutton-check{margin-left:-20px; padding: 5px 5px 5px 20px;}
+
+            .vbutton:hover {
+                border-top-color: #819BCB;
+                border-right-color: #819BCB;
+                border-bottom-color: #5E050B;
+                border-left-color: #819BCB;
+                border-width: 0px 0px 2px 0px;
+                border-style: solid;
+                background-color: #1ab0ec;
+                background-image: -webkit-gradient(linear, left top, left bottom, from(#1ab0ec), to(#1a92c2));
+                background-image: -webkit-linear-gradient(top, #1ab0ec, #1a92c2);
+                background-image: -moz-linear-gradient(top, #1ab0ec, #1a92c2);
+                background-image: -ms-linear-gradient(top, #1ab0ec, #1a92c2);
+                background-image: -o-linear-gradient(top, #1ab0ec, #1a92c2);
+                background-image: linear-gradient(to bottom, #1ab0ec, #1a92c2);
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#1ab0ec, endColorstr=#1a92c2);
+            }
+
+/*end Editor underline starts*/
+.foot{
+color: #707070;
+font-size:11px;
+}
+.foot a { color: inherit; text-decoration:inherit}
+.vers{
+font-size:22px;
+color: #A4A4A4;
+-ms-transform: rotate(90deg);
+-webkit-transform: rotate(90deg);
+transform: rotate(90deg);
+}
+		
+.corr {
+  border-bottom:2px dotted green;
+  display: inline-block;
+  position: relative;
+}
+.corr:after {
+  content: '';
+  width: 100%;
+  border-bottom:2px dotted green;
+  position: absolute;
+  font-size: 16px;
+  left: -2px;
+  display: block;
+  
+  /*top: 15px; Must be font-size minus one (16px - 1px) */
+  /*height: 4px;*/
+  }
+.sugg {
+  border-bottom:2px dotted red;
+  display: inline;/*inline-block*/
+  position: relative;
+}
+.sugg:after {
+  content: '';
+  width: 100%;
+  border-bottom:2px dotted red;
+  position: absolute;
+  font-size: 16px;
+  left: -2px;
+  display: block;
+  
+  /*top: 15px; /* Must be font-size minus one (16px - 1px) */
+  /*height: 4px;*/
+  }
+
+  .err {
+  border-bottom:2px dotted black;
+  display: inline;/*inline-block*/
+  position: relative;
+}
+.err:after {
+  content: '';
+  width: 100%;
+  border-bottom:2px dotted black;
+  position: absolute;
+  font-size: 16px;
+  left: -2px;
+  display: block;
+  
+  /*top: 15px; /* Must be font-size minus one (16px - 1px) */
+ /* height: 4px;*/
+  }
+/*end Editor underline ends*/
+.jqpopupmenu { /*topmost and sub ULs, respectively*/
+            font: normal 13px Verdana;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: hand;
+            cursor: pointer;
+            list-style-type: none;
+            background: white;
+            border: 1px solid black;
+            //visibility: hidden;
+            //display: none; /*collapse all sub menus to begin with*/
+            box-shadow: 3px 3px 8px #818181; /*shadow for CSS3 capable browsers.*/
+            -webkit-box-shadow: 3px 3px 8px #818181;
+            -moz-box-shadow: 3px 3px 8px #818181;
+        }
+
+
+            .jqpopupmenu li {
+                position: relative;
+            }
+
+                .jqpopupmenu li span {
+                    display: block;
+                    width:  inherit; /*width of menu (not including side paddings)*/
+                    color: black;
+                    background: #F5F5F5;
+                    text-decoration: none;
+                    padding: 4px 5px;
+                }
+
+                    .jqpopupmenu li span.sugword {
+                        background-color: lightyellow;
+                    }
+
+                    .jqpopupmenu li span.userword {
+                        background: url("user.png") 50% no-repeat right;
+                    }
+
+            * html .jqpopupmenu li { /*IE6 CSS hack*/
+                display: inline-block;
+                width: 170px; /*width of menu (include side paddings of LI A*/
+            }
+
+                .jqpopupmenu li span:hover {
+                    background: #e0e0e0;
+                }
+   
+        #MainContent_myarea1 {
+            border: 1px solid #000;
+            height: 450px;
+            width: 850px;
+            overflow: scroll;
+            text-decoration: none;
+            margin: 0 auto;
+            display: block;
+            spellcheck:false;
+            font-size: 13px;
+        }
+
+        #Vaani_Box {
+            overflow: scroll;
+            text-decoration: none;
+            margin: 0 auto;
+            width:850px;
+            height:450px;
+            font-size: 12px;
+        }
+
+        .wrong {
+            text-decoration: underline;
+        }
+
+        .doudt {
+            color: red;
+        }
+
+        .corrected {
+            color: green;
+        }
+
+/*script convertor css*/
+.Tamillibitip{
+border: 0px;
+background: #f1f1f1;
+position: fixed;
+padding: 10px;
+border-radius: 10px;
+-moz-border-radius: 10px;
+}

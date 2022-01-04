@@ -1,0 +1,44 @@
+{
+  "manifest_version" : 2,
+  "name": "வாணி",
+  "version" : "0.0.1",
+  "description" : "Vaani Tamil Spellchecker",
+  "web_accessible_resources": [ "images/*"], 
+   "default_locale": "ta",
+  "browser_action":
+  {
+    "default_icon":
+    {
+      "100": "images/Vaani_logo.png"
+    },
+    "default_title": "வாணி"
+  },
+  "icons":
+  {
+    "16": "images/favicon.ico"
+  },
+  "background":
+  {
+//     "scripts": ["background.js"]
+"page": "background.html"
+  },
+   "browser_action": {
+      "default_icon": "images/favicon.ico",
+      "default_popup": "popup.html",
+      "default_title": "தமிழ்ப்புள்ளி"
+   },
+"content_scripts": [{
+    "css": ["style5.css"],
+    "js": ["jquery.min-1.11.2.js"],//,"indic_convertor.js","client_scipt_convertor.js"
+    "matches": ["http://*/*","https://*/*"]
+  }],
+
+  "permissions":
+  [ //permitted to access following pages
+    "http://*/*",
+    "https://*/*",
+    "contextMenus",
+    "tabs","windows", "storage"
+  ],
+"content_security_policy": "default-src 'none'; style-src 'self'; script-src 'self'; connect-src http://vaani.neechalkaran.com"
+}

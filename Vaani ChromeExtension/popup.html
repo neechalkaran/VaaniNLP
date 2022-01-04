@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script type='text/javascript' src='jquery.min-1.11.2.js'></script>
+</head>
+<body>
+
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">செயல்படுத்து</label> 
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">முடக்கு</label>
+<br/>
+
+
+<div class='buttons-area'>
+            <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+                <label class="onoffswitch-label" for="myonoffswitch"></label>
+            </div>
+            <div class='block-spoilers-message'>
+                On Off Button
+            </div>
+</div>
+
+<script type="type/javascript">
+
+
+chrome.storage.local.set({ "transliterate": true }, function(){
+    //  Data's been saved boys and girls, go on home
+});
+
+chrome.storage.sync.get(["transliterate"], function(items){
+alert(items);
+});
+
+
+
+
+
+
+
+function saveChanges() {
+    // Get a value.
+    if ($('#myonoffswitch').is(':checked')) {
+        localStorage.mydata = 'y';
+    } else {
+        localStorage.mydata = 'n';
+    }
+    // Save it using the Chrome extension storage API.
+    chrome.storage.sync.set({
+        'value': localStorage.mydata
+    }, function () {
+
+    });
+}
+
+$(document).ready(function () {
+    if (localStorage.getItem('mydata')) {
+        if (localStorage.mydata == 'n') {
+            $('#myonoffswitch').attr('checked', false);
+        } else {
+            $('#myonoffswitch').attr('checked', true);
+        }
+    } else {
+        if ($('#myonoffswitch').is(':checked')) {
+            localStorage.setItem('mydata', 'y');
+        } else {
+            localStorage.setItem('mydata', 'n');
+        }
+    }
+
+    $('#myonoffswitch').click(function () {
+        saveChanges();
+    });
+
+});
+</script>
+</body><html>
