@@ -50,7 +50,7 @@ def weight(a):
   return result
 
 def remove_stopwords(words):
-  stop_words_list = open(os.path.dirname(os.path.abspath(__file__))+"/stop_words.txt", "r").read().split("\n")
+  stop_words_list = open(os.path.dirname(os.path.abspath(__file__))+"/stop_words.txt", "r", encoding='utf-8').read().split("\n")
   new_words =[]
   for i in words:
     if i not in stop_words_list:
